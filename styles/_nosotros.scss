@@ -38,6 +38,7 @@
 }
 
 .comunity {
+    background-color: hsl(207deg, 100%, 98%);
     @include mixins.section-style;
     @media (min-width: 1115px) {
         flex-direction: row-reverse;
