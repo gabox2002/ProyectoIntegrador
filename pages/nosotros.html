@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/003962264f.js" crossorigin="anonymous"></script>
+    <title>Juguetería Cósmica</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__navigation">
+            <img class="header__menu" src="../assets/images/icon-menu.svg" alt="menu icon">
+            <div class="header__logo">
+                <p>Juguetería Cósmica</p>
+            </div>
+            <nav class="navbar">
+                <ul class="navbar__items">
+                    <li><a class="navbar__link" href="../index.html">Inicio</a></li>
+                    <li><a class="navbar__link" href="./upload.html">Alta de productos</a></li>
+                    <li><a class="navbar__link" href="./contacto.html">Contacto</a></li>
+                    <li><a class="navbar__link" href="./nosotros.html">Nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- inicio modal navbar -->
+        <div class="modal-navbar__background">
+            <nav class="modal-navbar">
+                <div class="modal-navbar__close-container">
+                    <img class="modal-navbar__close-icon" src="../assets/images/icon-close.svg" alt="close icon">
+                </div>
+                <div class="modal-navbar__logo">
+                    <p>Juguetería Cósmica</p>
+                </div>
+                <ul class="modal-navbar__items">
+                    <li><a class="modal-navbar__link" href="../index.html">Inicio</a></li>
+                    <li><a class="modal-navbar__link" href="./upload.html">Alta de productos</a></li>
+                    <li><a class="modal-navbar__link" href="./contacto.html">Contacto</a></li>
+                    <li><a class="modal-navbar__link" href="./nosotros.html">Nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- final modal navbar -->
+
+        <div class="header__cart-avatar">
+            <div class="header__search">
+                <input class="header__search--input" type="text" id="searchInput" placeholder="Buscar">
+                <button class="header__search--btn" onclick="toggleSearch()"></button>
+            </div>
+            <div class="header__cart">
+                <div class="header__cart--notification">0</div>
+                <img src="../assets/images/icon-cart.svg" alt="icon cart">
+            </div>
+            <div class="header__avatar">
+                <img src="../assets/images/icon-perfil.svg" alt="avatar">
+            </div>
+        </div>
+    </header>
+    <!-- Inicio del modal de inicio de sesión y registro -->
+    <div class="modal-login__background">
+        <nav class="modal-login">
+            <div class="modal-login__close-container">
+                <img class="modal-login__close-icon" src="../assets/images/icon-close.svg" alt="">
+            </div>
+            <h2>Iniciar Sesión/Registrarse</h2>
+            <div class="login-box">
+                <form>
+                    <div class="user-box">
+                        <input type="text" name="username" id="username">
+                        <label for="username">Username</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" name="password" id="password">
+                        <label for="password">Password</label>
+                    </div>
+                </form>
+                <div class="user-button">
+                    <button type="submit">Login</button>
+                    <button type="submit">Register</button>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+    <!-- Fin del modal de inicio de sesión y registro -->
+    <main class="main-container">
+        <section class="history">
+            <article class="history__image">
+                <img src="../assets/images/Toys-1.jpg" alt="jugueteria">
+            </article>
+            <article class="history__description">
+                <h2 class="history__description--title">Nuestra Historia</h2>
+                <p class="history__description--content">¡Bienvenidos a la Juguetería Toys, donde la diversión y la
+                    imaginación se encuentran desde 1995! Fundada por Andrea Rodríguez, una apasionada educadora
+                    infantil con un sueño: crear un espacio donde los niños pudieran aprender y desarrollarse a través
+                    del juego.</p>
+            </article>
+        </section>
+
+        <section class="mission">
+            <article class="mission__image">
+                <img src="../assets/images/Toys-2.jpg" alt="jugueteria">
+            </article>
+            <article class="mission__description">
+                <h2 class="mission__description--title">Misión y Valores</h2>
+                <p class="mission__description--content">En Juguetería Cósmica, nos comprometemos a proporcionar
+                    juguetes que no solo entretengan, sino que también inspiren y eduquen. Nuestra misión es alimentar
+                    la creatividad, fomentar el aprendizaje y promover momentos felices en la infancia. Nos regimos por
+                    valores de calidad, responsabilidad y diversidad en nuestra selección de productos.</p>
+            </article>
+        </section>
+
+        <section class="comunity">
+            <article class="comunity__image">
+                <img src="../assets/images/Toys-3.jpg" alt="jugueteria">
+            </article>
+            <article class="comunity__description">
+                <h2 class="comunity__description--title">Compromiso con la Comunidad</h2>
+                <p class="comunity__description--content">Somos parte activa de nuestra comunidad. Hemos organizado
+                    eventos en colaboración con escuelas locales, donado juguetes a organizaciones benéficas y
+                    participado en programas educativos para niños. Creemos que contribuir a nuestra comunidad es
+                    esencial para construir un mundo más vibrante y solidario.</p>
+            </article>
+        </section>
+
+        <section class="visit">
+            <h2 class="visit--title">Conoce nuestra jugueteria!! </h2>
+            <div class="visit--button">
+                <button onclick="document.location='../index.html'">Cátalogo</button>
+            </div>
+        </section>
+
+        <section class="team">
+            <h2 class="team__title">Nuestro Equipo</h2>
+            <div class="team__members">
+                <div class="team__members__member">
+                    <img class="team__members__member--photo" src="../assets/images/member1.jpg" alt="Foto de Miembro 1">
+                    <h3 class="team__members__member--name">Andrea</h3>
+                    <p class="team__members__member--position">Presidencia</p>
+                </div>
+                <div class="team__members__member">
+                    <img class="team__members__member--photo" src="../assets/images/member2.jpg" alt="Foto de Miembro 2">
+                    <h3 class="team__members__member--name">Federico</h3>
+                    <p class="team__members__member--position">Adminitración</p>
+                </div>
+                <div class="team__members__member">
+                    <img class="team__members__member--photo" src="../assets/images/member3.jpg" alt="Foto de Miembro 3">
+                    <h3 class="team__members__member--name">Martina</h3>
+                    <p class="team__members__member--position">Tesorería</p>
+                </div>
+                <div class="team__members__member">
+                    <img class="team__members__member--photo" src="../assets/images/member4.jpg" alt="Foto de Miembro 4">
+                    <h3 class="team__members__member--name">Josue</h3>
+                    <p class="team__members__member--position">Ejecutivo de Ventas</p>
+                </div>
+            </div>
+        </section>
+        <!-- inicio cart modal -->
+        <div class="cart-modal">
+            <p class="cart-modal__title">Cart</p>
+            <div class="cart-modal__checkout-container">
+                <div class="cart-modal__details-container">
+                    <img src="./assets/images/image-product-1.jpg" alt="batman">
+                    <div>
+                        <p class="cart-modal__product">Dc Multiverse Batman 30 Cm Mcfarlane</p>
+                        <p class="cart-modal__price">$<span>20.000</span></p>
+                    </div>
+                    <img class="cart-modal__delete" src="../assets/images/icon-delete.svg" alt="icon delete">
+                </div>
+                <button class="cart-modal__checkout">Checkout</button>
+            </div>
+        </div>
+        <!-- final cart modal -->
+    </main>
+
+    <footer class="footer">
+        <div class="footer__navigation">
+            <div class="link-Navigation">
+                <ul>
+                    <li>
+                        <a href="../index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="./upload.html">Alta de productos</a>
+                    </li>
+                    <li>
+                        <a href="./contacto.html">Contacto</a>
+                    </li>
+                    <li>  
+                        <a href="./nosotros.html">Nosotros</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Ingresar</li>
+                    <li>Buscar</li>
+                    <li>Catálogo</li>
+                    <li>Novedades</li>
+                </ul>
+            </div>
+            <div class="footer__social-media">
+                <div>
+                    <div class="seguinos">
+                        <p>Seguinos en nuestras redes sociales:</p>
+                    </div>
+                    <ul class="social-icons">
+                        <li class="icon facebook">
+                            <span class="tooltip">Facebook</span>
+                            <span><i class="fa-brands fa-facebook social-icon"></i></span>
+                        </li>
+                        <li class="icon instagram">
+                            <span class="tooltip">Instagram</span>
+                            <span><i class="fa-brands fa-instagram social-icon"></i></span>
+                        </li>
+                        <li class="icon whatsapp">
+                            <span class="tooltip">Whatsapp</span>
+                            <span><i class="fa-brands fa-whatsapp social-icon"></i></span>
+                        </li>
+                        <li class="icon youtube">
+                            <span class="tooltip">Youtube</span>
+                            <span><i class="fa-brands fa-youtube social-icon"></i></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <div>
+                <p>Proyecto integrador Etapa 1</p>
+            </div>
+            <div>
+                <p>Realizado por
+                    <a href="https://github.com/gabox2002" target="_blank">Gabriel Quispe</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/navbar.js"></script>
+
+</body>
+</html>

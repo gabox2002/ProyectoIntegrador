@@ -1,0 +1,105 @@
+@use "variables" as v;
+@use "mixins";
+
+.card-container {
+    background-color: white !important;
+    @media (min-width: 1115px) {
+        background-color: hsl(207deg, 100%, 98%) !important;
+    }
+}
+
+.content-form {
+    color: #333;
+    padding-bottom: 100px;
+    margin-top: 40px;
+
+    @media (min-width: 1115px) {
+        padding-bottom: 120px;
+        margin-top: 40px;
+    }
+}
+.formpages {
+    padding-top: 30px;
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    @media (min-width: 1115px) {
+        padding-top: 10px;
+    }
+}
+
+.column {
+    width: 48%;
+    float: left;
+    margin-right: 2%;
+    @media (max-width: 1115px) {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+    }
+
+    &__form-group {
+        margin-bottom: 20px;
+
+        &:first-child {
+            margin-top: 30px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            transition: border-color 0.3s ease;
+
+            &:focus {
+                outline: none;
+                border-color: #5cacee;
+                box-shadow: 0 0 5px #5cacee;
+            }
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .checkbox-envio {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .label-required::after {
+            content: "(*)";
+            color: rgb(182, 17, 17);
+            margin-left: 0.5rem;
+        }
+
+        .form-control[aria-invalid="true"] {
+            outline: 2px solid rgb(182, 17, 17);
+        }
+
+        .input-msg-error {
+            display: none;
+            color: rgb(182, 17, 17);
+        }
+
+        textarea {
+            resize: vertical;
+        }
+    }
+}
+button {
+    @include mixins.button;
+}

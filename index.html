@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/003962264f.js" crossorigin="anonymous"></script>
+    <title>Juguetería Cósmica</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__navigation">
+            <img class="header__menu" src="./assets/images/icon-menu.svg" alt="menu icon">
+            <div class="header__logo">
+                <p>Juguetería Cósmica</p>
+            </div>
+            <nav class="navbar">
+                <ul class="navbar__items">
+                    <li><a class="navbar__link" href="#">Inicio</a></li>
+                    <li>
+                        <a class="navbar__link" href="./pages/upload.html">Alta de productos</a>
+                    </li>
+                    <li>
+                        <a class="navbar__link" href="./pages/contacto.html">Contacto</a>
+                    </li>
+                    <li>
+                        <a class="navbar__link" href="./pages/nosotros.html">Nosotros</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- inicio modal navbar -->
+        <div class="modal-navbar__background">
+            <nav class="modal-navbar">
+                <div class="modal-navbar__close-container">
+                    <img class="modal-navbar__close-icon" src="./assets/images/icon-close.svg" alt="icon close">
+                </div>
+                <div class="modal-navbar__logo">
+                    <p>Juguetería Cósmica</p>
+                </div>
+                <ul class="modal-navbar__items">
+                    <li>
+                        <a class="modal-navbar__link" href="#">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="modal-navbar__link" href="./pages/upload.html">Alta de productos</a>
+                    </li>
+                    <li>
+                        <a class="modal-navbar__link" href="./pages/contacto.html">Contacto</a>
+                    </li>
+                    <li>
+                        <a class="modal-navbar__link" href="./pages/nosotros.html">Nosotros</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- final modal navbar -->
+
+        <div class="header__cart-avatar">
+            <div class="header__search">
+                <input class="header__search--input" type="text" id="searchInput" placeholder="Buscar">
+                <button class="header__search--btn" onclick="toggleSearch()"></button>
+            </div>
+            <div class="header__cart">
+                <div class="header__cart--notification">0</div>
+                <img src="./assets/images/icon-cart.svg" alt="icon cart">
+            </div>
+            <div class="header__avatar">
+                <img src="./assets/images/icon-perfil.svg" alt="avatar">
+            </div>
+        </div>
+    </header>
+    <!-- Inicio del modal de inicio de sesión y registro -->
+    <div class="modal-login__background">
+        <nav class="modal-login">
+            <div class="modal-login__close-container">
+                <img class="modal-login__close-icon" src="../assets/images/icon-close.svg" alt="icon close">
+            </div>
+            <h2>Iniciar Sesión/Registrarse</h2>
+            <div class="login-box">
+                <form>
+                    <div class="user-box">
+                        <input type="text" name="username" id="username">
+                        <label for="username">Username</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" name="password" id="password">
+                        <label for="password">Password</label>
+                    </div>
+                </form>
+                <div class="user-button">
+                    <button type="submit">Login</button>
+                    <button type="submit">Register</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Fin del modal de inicio de sesión y registro -->
+    <main class="main-container card-container">
+        <h2 class="title-context">Listado de productos</h2>
+        <div class="content content-cards">
+            <div class="card__container">
+                <article class="card">
+                    <a href="./pages/producto.html">
+                        <img src="./assets/images/cards/batman.jpeg" class="card__image" alt="batman">
+                    </a>
+                    <section class="card__description">
+                        <div class="card__description--category">
+                            <p>Superhéroe</p>
+                        </div>
+                        <div class="card__description--title">
+                            <h2 class="card__description--link">
+                                <a href="#">Batman</a>
+                            </h2>
+                            <strong class="card__description--price">$20.000</strong>
+                        </div>
+                        <p class="card__description--info">
+                            Some quick example text to build on the card
+                            title and make up the bulk of the card's
+                            content.&nbsp;
+                        </p>
+                        <div class="card_button">
+                            <button class="card_button--comprar" onclick="document.location='./pages/producto.html'">Comprar</button>
+                        </div>
+                    </section>
+                </article>
+
+                <article class="card">
+                    <a href="#">
+                        <img src="./assets/images/cards/iron.jpeg" class="card__image" alt="ironman">
+                    </a>
+                    <section class="card__description">
+                        <div class="card__description--category">
+                            <p>Superhéroe</p>
+                        </div>
+                        <div class="card__description--title">
+                            <h2 class="card__description--link">
+                                <a href="#">Ironman</a>
+                            </h2>
+                            <strong class="card__description--price">$16.000</strong>
+                        </div>
+                        <p class="card__description--info">
+                            Some quick example text to build on the card
+                            title and make up the bulk of the card's
+                            content.
+                        </p>
+                        <div class="card_button">
+                            <button class="card_button--comprar" onclick="document.location='./pages/producto.html'">Comprar</button>
+                        </div>
+                    </section>
+                </article>
+
+                <article class="card">
+                    <a href="#">
+                        <img src="./assets/images/cards/lego.jpeg" class="card__image" alt="lego">
+                    </a>
+                    <section class="card__description">
+                        <div class="card__description--category">
+                            <p>Juguete de Construcción</p>
+                        </div>
+                        <div class="card__description--title">
+                            <h2 class="card__description--link">
+                                <a href="#">Lego</a>
+                            </h2>
+                            <strong class="card__description--price">$12.000</strong>
+                        </div>
+                        <p class="card__description--info">
+                            Some quick example text to build on the card
+                            title and make up the bulk of the card's content
+                            d sfasdfhasdhfaksjdhfakjdhfaksdj hfakjha
+                            sdfasdfg askdjfa sdfad fasjdhfa dfasdf asdkfja
+                            df.
+                        </p>
+                        <div class="card_button">
+                            <button class="card_button--comprar" onclick="document.location='./pages/producto.html'">Comprar</button>
+                        </div>
+                    </section>
+                </article>
+
+                <article class="card">
+                    <a href="#">
+                        <img src="./assets/images/cards/yoda.jpeg" class="card__image" alt="yoda">
+                    </a>
+                    <section class="card__description">
+                        <div class="card__description--category">
+                            <p>Juguete de Colección</p>
+                        </div>
+                        <div class="card__description--title">
+                            <h2 class="card__description--link">
+                                <a href="#">Yoda</a>
+                            </h2>
+                            <strong class="card__description--price">$8.000</strong>
+                        </div>
+                        <p class="card__description--info">
+                            Some quick example text to build on the card
+                            title and make up the bulk of the card's
+                            content.
+                        </p>
+                        <div class="card_button">
+                            <button class="card_button--comprar" onclick="document.location='./pages/producto.html'">Comprar</button>
+                        </div>
+                    </section>
+                </article>
+
+                <article class="card">
+                    <a href="#">
+                        <img src="./assets/images/cards/Bubiloons.jpg" class="card__image" alt="bubiloons">
+                    </a>
+                    <section class="card__description">
+                        <div class="card__description--category">
+                            <p>Juguete de Colección</p>
+                        </div>
+                        <div class="card__description--title">
+                            <h2 class="card__description--link">
+                                <a href="#">Bubiloons</a>
+                            </h2>
+                            <strong class="card__description--price">$10.000</strong>
+                        </div>
+                        <p class="card__description--info">
+                            Some quick example text to build on the card
+                            title and make up the bulk of the card's
+                            content.&nbsp;
+                        </p>
+                        <div class="card_button">
+                            <button class="card_button--comprar" onclick="document.location='./pages/producto.html'">Comprar</button>
+                        </div>
+                    </section>
+                </article>
+
+                <article class="card">
+                    <a href="#">
+                        <img src="./assets/images/cards/SuperZing.jpg" class="card__image" alt="super zing">
+                    </a>
+                    <section class="card__description">
+                        <div class="card__description--category">
+                            <p>Juguete Interactivo</p>
+                        </div>
+                        <div class="card__description--title">
+                            <h2 class="card__description--link">
+                                <a href="#">Super Zing</a>
+                            </h2>
+                            <strong class="card__description--price">$14.000</strong>
+                        </div>
+                        <p class="card__description--info">
+                            Some quick example text to build on the card
+                            title and make up the bulk of the card's
+                            content.&nbsp;
+                        </p>
+                        <div class="card_button">
+                            <button class="card_button--comprar" onclick="document.location='./pages/producto.html'">Comprar</button>
+                        </div>
+                    </section>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__navigation">
+            <div class="link-Navigation">
+                <ul>
+                    <li>
+                        <a href="./index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="./pages/upload.html">Alta de productos</a>
+                    </li>
+                    <li>
+                        <a href="./pages/contacto.html">Contacto</a>
+                    </li>
+                    <li>  
+                        <a href="./pages/nosotros.html">Nosotros</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Ingresar</li>
+                    <li>Buscar</li>
+                    <li>Catálogo</li>
+                    <li>Novedades</li>
+                </ul>
+            </div>
+            <div class="footer__social-media">
+                <div>
+                    <div class="seguinos">
+                        <p>Seguinos en nuestras redes sociales:</p>
+                    </div>
+                    <ul class="social-icons">
+                        <li class="icon facebook">
+                            <span class="tooltip">Facebook</span>
+                            <span><i class="fa-brands fa-facebook social-icon"></i></span>
+                        </li>
+                        <li class="icon instagram">
+                            <span class="tooltip">Instagram</span>
+                            <span><i class="fa-brands fa-instagram social-icon"></i></span>
+                        </li>
+                        <li class="icon whatsapp">
+                            <span class="tooltip">Whatsapp</span>
+                            <span><i class="fa-brands fa-whatsapp social-icon"></i></span>
+                        </li>
+                        <li class="icon youtube">
+                            <span class="tooltip">Youtube</span>
+                            <span><i class="fa-brands fa-youtube social-icon"></i></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <div>
+                <p>Proyecto integrador Etapa 1</p>
+            </div>
+            <div>
+                <p>Realizado por
+                    <a href="https://github.com/gabox2002" target="_blank">Gabriel Quispe</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/navbar.js"></script>
+    <script></script>
+</body>
+
+</html>

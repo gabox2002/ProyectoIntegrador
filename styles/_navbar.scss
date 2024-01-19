@@ -1,0 +1,52 @@
+@use 'variables' as v;
+
+.navbar {
+    display: none;
+    width: 400px;
+    &__items {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        @media (min-width: 1115px) {
+            padding-left: 20px;
+        }
+        a { 
+            position: relative;
+            letter-spacing: 0.5px;
+            &:after {
+                content: "";
+                position: absolute;
+
+                background-color: v.$Bright-Blue-hover;
+                height: 3px;
+                width: 0;
+                left: 0;
+                bottom: -10px;
+                transition: 0.2s;
+            }
+            &:hover {
+                color: v.$Black; 
+            }
+            &:hover:after {
+                width: 100%;
+            }
+        }
+    }
+    &__link {
+        text-decoration: none;
+        
+        color: v.$Dark-grayish-blue;
+        display:block;
+        height: 72px;
+        padding-top: 36px;
+      
+    }
+    @media (min-width: 1115px) {
+        display: block;
+    }
+    
+}
+
+
+
+

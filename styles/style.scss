@@ -1,0 +1,53 @@
+@use "cards";
+@use "initial";
+@use "variables" as v;
+@use "header";
+@use "navbar";
+@use "modal-navbar";
+@use "gallery";
+@use "details";
+@use "input";
+@use "modal-cart";
+@use "modal-login";
+@use "nosotros";
+@use "formpages";
+@use "footer";
+
+@font-face {
+    font-family: "matura";
+    src: url("../assets/fonts/Matura.ttf") format("truetype");
+}
+@font-face {
+    font-family: "kalam";
+    src: url("../assets/fonts//Kalam.ttf") format("truetype");
+}
+
+.main-container {
+    background-color: hsl(207deg, 100%, 98%);
+    width: 375px;
+    font-family: "kalam", sans-serif;
+    margin: auto;
+    position: relative;
+    @media (min-width: 1115px) {
+        width: 100%;
+        min-height: 900px;
+    }
+}
+.content {
+    @media (min-width: 1115px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 124px;
+        height: 100%;
+    }
+}
+.show {
+    display: block;
+}
+.cart-empty {
+    font-weight: 700;
+    color: v.$Black-modal;
+    text-align: center;
+    margin-top: 30px;
+}

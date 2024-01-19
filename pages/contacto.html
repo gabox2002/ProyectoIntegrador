@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <script src="https://kit.fontawesome.com/003962264f.js" crossorigin="anonymous"></script>
+    <title>Juguetería Cósmica</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__navigation">
+            <img class="header__menu" src="../assets/images/icon-menu.svg" alt="menu icon">
+            <div class="header__logo">
+                <p>Juguetería Cósmica</p>
+            </div>
+            <nav class="navbar">
+                <ul class="navbar__items">
+                    <li><a class="navbar__link" href="../index.html">Inicio</a></li>
+                    <li><a class="navbar__link" href="./upload.html">Alta de productos</a></li>
+                    <li><a class="navbar__link" href="#">Contacto</a></li>
+                    <li><a class="navbar__link" href="./nosotros.html">Nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- inicio modal navbar -->
+        <div class="modal-navbar__background">
+            <nav class="modal-navbar">
+                <div class="modal-navbar__close-container">
+                    <img class="modal-navbar__close-icon" src="../assets/images/icon-close.svg" alt="close icon">
+                </div>
+                <div class="modal-navbar__logo">
+                    <p>Juguetería Cósmica</p>
+                </div>
+                <ul class="modal-navbar__items">
+                    <li><a class="modal-navbar__link" href="../index.html">Inicio</a></li>
+                    <li><a class="modal-navbar__link" href="./upload.html">Alta de productos</a></li>
+                    <li><a class="modal-navbar__link" href="#">Contacto</a></li>
+                    <li><a class="modal-navbar__link" href="./nosotros.html">Nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- final modal navbar -->
+
+        <div class="header__cart-avatar">
+            <div class="header__search">
+                <input class="header__search--input" type="text" id="searchInput" placeholder="Buscar" >
+                <button class="header__search--btn" onclick="toggleSearch()"></button>
+            </div>
+            <div class="header__cart">
+                <div class="header__cart--notification">0</div>
+                <img src="../assets/images/icon-cart.svg" alt="icon cart">
+            </div>
+            <div class="header__avatar-container">
+                <div class="header__avatar">
+                    <img src="../assets/images/icon-perfil.svg" alt="avatar">
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- Inicio del modal de inicio de sesión y registro -->
+    <div class="modal-login__background">
+        <nav class="modal-login">
+            <div class="modal-login__close-container">
+                <img class="modal-login__close-icon" src="../assets/images/icon-close.svg" alt="">
+            </div>
+            <h2>Iniciar Sesión/Registrarse</h2>
+            <div class="login-box">
+                <form>
+                    <div class="user-box">
+                        <input type="text" name="username" id="username">
+                        <label for="username">Username</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" name="password" id="password">
+                        <label for="password">Password</label>
+                    </div>
+                </form>
+                <div class="user-button">
+                    <button type="submit">Login</button>
+                    <button type="submit">Register</button>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+    <!-- Fin del modal de inicio de sesión y registro -->
+    <main class="main-container form-container">
+
+        <h2 class="title-context">Contactanos</h2>
+        <section class="content content-form">
+            <div class="container">
+                <div class="">
+                    <form class="formpages" id="uploadForm" onsubmit="onSubmitContact(event)">
+                        <div class="column__form-group">
+                            <label for="name" class="form-label label-required">Nombre</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                            <p id="nameError" class="input-msg-error"></p>
+                        </div>
+                        <div class="column__form-group">
+                            <label for="mail" class="form-label label-required">Email</label>
+                            <input type="email" class="form-control" id="mail" name="mail" required>
+                            <p id="mailError" class="input-msg-error"></p>
+                        </div>
+                        <div class="column__form-group">
+                            <label for="comment" class="form-label">Comentarios</label>
+                            <textarea class="form-control" id="comment" name="comment" maxlength="400"></textarea>
+                        </div>
+                        <div class="form-button">
+                            <button type="submit" class="">Enviar comentarios</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__navigation">
+            <div class="link-Navigation">
+                <ul>
+                    <li>
+                        <a href="../index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="./upload.html">Alta de productos</a>
+                    </li>
+                    <li>
+                        <a href="./contacto.html">Contacto</a>
+                    </li>
+                    <li>  
+                        <a href="./nosotros.html">Nosotros</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Ingresar</li>
+                    <li>Buscar</li>
+                    <li>Catálogo</li>
+                    <li>Novedades</li>
+                </ul>
+            </div>
+            <div class="footer__social-media">
+                <div>
+                    <div class="seguinos">
+                        <p>Seguinos en nuestras redes sociales:</p>
+                    </div>
+                    <ul class="social-icons">
+                        <li class="icon facebook">
+                            <span class="tooltip">Facebook</span>
+                            <span><i class="fa-brands fa-facebook social-icon"></i></span>
+                        </li>
+                        <li class="icon instagram">
+                            <span class="tooltip">Instagram</span>
+                            <span><i class="fa-brands fa-instagram social-icon"></i></span>
+                        </li>
+                        <li class="icon whatsapp">
+                            <span class="tooltip">Whatsapp</span>
+                            <span><i class="fa-brands fa-whatsapp social-icon"></i></span>
+                        </li>
+                        <li class="icon youtube">
+                            <span class="tooltip">Youtube</span>
+                            <span><i class="fa-brands fa-youtube social-icon"></i></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <div>
+                <p>Proyecto integrador Etapa 1</p>
+            </div>
+            <div>
+                <p>Realizado por
+                    <a href="https://github.com/gabox2002" target="_blank">Gabriel Quispe</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/navbar.js"></script>
+    <script src="../js/validations.js"></script>
+    <script src="../js/contact.js"></script>
+
+</body>
+
+</html>

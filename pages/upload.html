@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <script src="https://kit.fontawesome.com/003962264f.js" crossorigin="anonymous"></script>
+    <title>Juguetería Cósmica</title>
+    <link rel="stylesheet" href="../styles/style.css" >
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__navigation">
+            <img class="header__menu" src="../assets/images/icon-menu.svg" alt="menu icon" >
+            <div class="header__logo">
+                <p>Juguetería Cósmica</p>
+            </div>
+            <nav class="navbar">
+                <ul class="navbar__items">
+                    <li>
+                        <a class="navbar__link" href="../index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="navbar__link" href="#">Alta de productos</a>
+                    </li>
+                    <li>
+                        <a class="navbar__link" href="./contacto.html">Contacto</a>
+                    </li>
+                    <li>
+                        <a class="navbar__link" href="./nosotros.html">Nosotros</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- inicio modal navbar -->
+        <div class="modal-navbar__background">
+            <nav class="modal-navbar">
+                <div class="modal-navbar__close-container">
+                    <img class="modal-navbar__close-icon" src="../assets/images/icon-close.svg" alt="icon close" >
+                </div>
+                <div class="modal-navbar__logo">
+                    <p>Juguetería Cósmica</p>
+                </div>
+                <ul class="modal-navbar__items">
+                    <li>
+                        <a class="modal-navbar__link" href="../index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="modal-navbar__link" href="#">Alta de productos</a>
+                    </li>
+                    <li>
+                        <a class="modal-navbar__link" href="./contacto.html">Contacto</a>
+                    </li>
+                    <li>
+                        <a class="modal-navbar__link" href="./nosotros.html">Nosotros</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- final modal navbar -->
+
+        <div class="header__cart-avatar">
+            <div class="header__search">
+                <input class="header__search--input" type="text" id="searchInput" placeholder="Buscar" >
+                <button class="header__search--btn" onclick="toggleSearch()"></button>
+            </div>
+            <div class="header__cart">
+                <div class="header__cart--notification">0</div>
+                <img src="../assets/images/icon-cart.svg" alt="icon notification" >
+            </div>
+            <div class="header__avatar">
+                <img src="../assets/images/icon-perfil.svg" alt="close icon" >
+            </div>
+        </div>
+    </header>
+    <!-- Inicio del modal de inicio de sesión y registro -->
+    <div class="modal-login__background">
+        <nav class="modal-login">
+            <div class="modal-login__close-container">
+                <img class="modal-login__close-icon" src="../assets/images/icon-close.svg" alt="close icon" >
+            </div>
+            <h2>Iniciar Sesión/Registrarse</h2>
+            <div class="login-box">
+                <form>
+                    <div class="user-box">
+                        <input type="text" name="username" id="username" >
+                        <label for="username">Username</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" name="password" id="password" >
+                        <label for="password">Password</label>
+                    </div>
+                </form>
+                <div class="user-button">
+                    <button type="submit">Login</button>
+                    <button type="submit">Register</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Fin del modal de inicio de sesión y registro -->
+    <main class="main-container form-container">
+        <h2 class="title-context">Dar de alta a un producto</h2>
+        <section class="content content-form">
+            <div class="container">
+                <div>
+                    <form class="formpages" id="uploadForm" onsubmit="onSubmitProduct(event)">
+                        <!-- Primera Columna -->
+                        <div class="column">
+                            <div class="column__form-group">
+                                <label for="name" class="form-label label-required">Nombre</label>
+                                <input type="text" class="form-control" id="name" name="name" required >
+                                <p id="nameError" class="input-msg-error"></p>
+                            </div>
+                            <div class="column__form-group">
+                                <label for="price" class="form-label label-required">Precio</label>
+                                <input type="number" class="form-control" id="price" name="price" required >
+                                <p id="priceError" class="input-msg-error"></p>
+                            </div>
+                            <div class="column__form-group">
+                                <label for="stock" class="form-label label-required">Stock</label>
+                                <input type="number" class="form-control" id="stock" name="stock" required min="0" >
+                                <p id="stockError" class="input-msg-error"></p>
+                            </div>
+                            <div class="column__form-group">
+                                <label for="brand" class="form-label">Marca</label>
+                                <input type="text" class="form-control" id="brand" name="brand" maxlength="20" >
+                                <p id="brandError" class="input-msg-error"></p>
+                            </div>
+                            <div class="column__form-group">
+                                <label for="category" class="form-label label-required">Categoría</label>
+                                <input type="text" class="form-control" id="category" name="category" required >
+                                <p id="categoryError" class="input-msg-error"></p>
+                            </div>
+                        </div>
+                        <!-- Fin de la Primera Columna -->
+                        <!-- Segunda Columna -->
+                        <div class="column">
+                            <div class="column__form-group">
+                                <label for="shortDescription" class="form-label label-required">Descripción
+                                    corta</label>
+                                <input type="text" class="form-control" id="shortDescription" name="shortDescription"
+                                    required maxlength="120" >
+                                <p id="shortDescriptionError" class="input-msg-error"></p>
+                            </div>
+                            <div class="column__form-group">
+                                <label for="longDescription" class="form-label">Descripción larga</label>
+                                <textarea class="form-control" id="longDescription" name="longDescription"
+                                    minlength="60" maxlength="400"></textarea>
+                            </div>
+                            <div class="column__form-group checkbox-envio">
+                                <input type="checkbox" class="form-checkbox" id="freeDeliver" name="freeDeliver" >
+                                <label for="freeDeliver" class="">Envio sin cargo</label>
+                            </div>
+                            <div class="column__form-group">
+                                <label for="ageFrom" class="form-label">Edad desde</label>
+                                <input type="number" class="form-control" id="ageFrom" name="ageFrom" min="0" >
+                                <p id="ageFromError" class="input-msg-error"></p>
+                            </div>
+                            <div class="column__form-group">
+                                <label for="ageTo" class="form-label">Edad hasta</label>
+                                <input type="number" class="form-control" id="ageTo" name="ageTo" min="1" >
+                                <p id="ageToError" class="input-msg-error"></p>
+                            </div>
+                            <div class="column__form-group">
+                                <label for="photo" class="form-label label-required">Foto</label>
+                                <input type="file" class="form-control" id="photo" name="photo" required >
+                                <p id="photoError" class="input-msg-error"></p>
+                            </div>
+                        </div>
+                        <!-- Fin de la Segunda Columna -->
+                        <button type="submit" class="">
+                            Guardar producto
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__navigation">
+            <div class="link-Navigation">
+                <ul>
+                    <li>
+                        <a href="../index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="./upload.html">Alta de productos</a>
+                    </li>
+                    <li>
+                        <a href="./contacto.html">Contacto</a>
+                    </li>
+                    <li>  
+                        <a href="./nosotros.html">Nosotros</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Ingresar</li>
+                    <li>Buscar</li>
+                    <li>Catálogo</li>
+                    <li>Novedades</li>
+                </ul>
+            </div>
+            <div class="footer__social-media">
+                <div>
+                    <div class="seguinos">
+                        <p>Seguinos en nuestras redes sociales:</p>
+                    </div>
+                    <ul class="social-icons">
+                        <li class="icon facebook">
+                            <span class="tooltip">Facebook</span>
+                            <span><i class="fa-brands fa-facebook social-icon"></i></span>
+                        </li>
+                        <li class="icon instagram">
+                            <span class="tooltip">Instagram</span>
+                            <span><i class="fa-brands fa-instagram social-icon"></i></span>
+                        </li>
+                        <li class="icon whatsapp">
+                            <span class="tooltip">Whatsapp</span>
+                            <span><i class="fa-brands fa-whatsapp social-icon"></i></span>
+                        </li>
+                        <li class="icon youtube">
+                            <span class="tooltip">Youtube</span>
+                            <span><i class="fa-brands fa-youtube social-icon"></i></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <div>
+                <p>Proyecto integrador Etapa 1</p>
+            </div>
+            <div>
+                <p>Realizado por
+                    <a href="https://github.com/gabox2002" target="_blank">Gabriel Quispe</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/validations.js"></script>
+    <script src="../js/upload.js"></script>
+</body>
+
+</html>
