@@ -1,6 +1,20 @@
 @use "variables" as v;
 @use "mixins";
 
+.product-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-family: "kalam", sans-serif;
+    position: relative;
+    @media (min-width: 1115px) {
+        width: 100%;
+        background-color: hsl(207deg, 100%, 98%);
+        min-height: 900px;
+    }
+    
+
+}
 .content-product {
     background-color: hsl(207deg, 100%, 98%);
     @media (min-width: 1115px) {
@@ -8,6 +22,8 @@
     }
 }
 .details {
+
+    width: 320px;
     padding: 24px;
     &__category {
         color: v.$Dark-grayish-blue;
@@ -51,6 +67,8 @@
     @media (min-width: 1115px) {
         width: 446px;
         padding-top: 20px;
+        padding-top: 160px;
+
         &__title {
             font-size: 2.2em;
             margin-bottom: 30px;

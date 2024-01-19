@@ -1,34 +1,79 @@
 @use "variables" as v;
 @use "mixins";
 
-.card-container {
-    background-color: white !important;
+.form-title {
+    padding-top: 50px;
+}
+.form-container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: "kalam", sans-serif;
+    margin: auto;
+    position: relative;
+    background-color: white;
+    padding-bottom: 100px;
     @media (min-width: 1115px) {
-        background-color: hsl(207deg, 100%, 98%) !important;
+        background-color: hsl(207deg, 100%, 98%);
     }
 }
 
 .content-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: #333;
     padding-bottom: 100px;
     margin-top: 40px;
-
+    
     @media (min-width: 1115px) {
         padding-bottom: 120px;
+        padding-right: 200px;
         margin-top: 40px;
+        align-self: center;
     }
 }
-.formpages {
-    padding-top: 30px;
+.contact {
+    max-width: 320px;
+    @media (min-width: 1115px) {
+        max-width: 250px;
+    }
+}
+.upload {
+    max-width: 320px;
+    @media (min-width: 1115px) {
+        max-width: 900px;
+    }
+}
+.formpages-contact {
     max-width: 900px;
     margin: auto;
     background: #fff;
-    padding: 40px;
+    padding: 10px 40px 20px 40px;
     box-sizing: border-box;
     box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     @media (min-width: 1115px) {
-        padding-top: 10px;
+
+    }
+    
+}
+.formpages-upload {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 10px 40px 20px 40px;
+    box-sizing: border-box;
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    @media (min-width: 1115px) {
+        width: 200%;
+        padding: 10px 40px 20px 80px;
+
     }
 }
 
@@ -41,16 +86,25 @@
         float: none;
         margin-right: 0;
     }
-
+    
     &__form-group {
         margin-bottom: 20px;
-
+        
         &:first-child {
             margin-top: 30px;
         }
-
-        .form-control {
+        
+        .contact {
             width: 100%;
+
+        }
+        .upload {
+            width: 100%;
+            @media (min-width: 1115px) {
+                width: 90%;
+            }
+        }
+        .form-control {
             padding: 10px;
             margin: 8px 0;
             box-sizing: border-box;
@@ -58,14 +112,14 @@
             border-radius: 4px;
             background-color: #f8f8f8;
             transition: border-color 0.3s ease;
-
+            
             &:focus {
                 outline: none;
                 border-color: #5cacee;
                 box-shadow: 0 0 5px #5cacee;
             }
         }
-
+        
         .form-label {
             display: block;
             margin-bottom: 8px;
@@ -85,16 +139,16 @@
             color: rgb(182, 17, 17);
             margin-left: 0.5rem;
         }
-
+        
         .form-control[aria-invalid="true"] {
             outline: 2px solid rgb(182, 17, 17);
         }
-
+        
         .input-msg-error {
             display: none;
             color: rgb(182, 17, 17);
         }
-
+        
         textarea {
             resize: vertical;
         }

@@ -89,34 +89,31 @@
         </nav>
     </div>
     <!-- Fin del modal de inicio de sesión y registro -->
-    <main class="main-container form-container">
-
-        <h2 class="title-context">Contactanos</h2>
-        <section class="content content-form">
-            <div class="container">
-                <div class="">
-                    <form class="formpages" id="uploadForm" onsubmit="onSubmitContact(event)">
-                        <div class="column__form-group">
-                            <label for="name" class="form-label label-required">Nombre</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                            <p id="nameError" class="input-msg-error"></p>
-                        </div>
-                        <div class="column__form-group">
-                            <label for="mail" class="form-label label-required">Email</label>
-                            <input type="email" class="form-control" id="mail" name="mail" required>
-                            <p id="mailError" class="input-msg-error"></p>
-                        </div>
-                        <div class="column__form-group">
-                            <label for="comment" class="form-label">Comentarios</label>
-                            <textarea class="form-control" id="comment" name="comment" maxlength="400"></textarea>
-                        </div>
-                        <div class="form-button">
-                            <button type="submit" class="">Enviar comentarios</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
+    <main>
+        <h2 class="title-context form-title">Contactanos</h2>
+        <div class="form-container">
+            <section class="content-form contact">
+                <form class="formpages-contact" id="uploadForm" onsubmit="onSubmitContact(event)">
+                    <div class="column__form-group">
+                        <label for="name" class="form-label label-required">Nombre</label>
+                        <input type="text" class="form-control contact" id="name" name="name" required>
+                        <p id="nameError" class="input-msg-error"></p>
+                    </div>
+                    <div class="column__form-group">
+                        <label for="mail" class="form-label label-required">Email</label>
+                        <input type="email" class="form-control contact" id="mail" name="mail" required>
+                        <p id="mailError" class="input-msg-error"></p>
+                    </div>
+                    <div class="column__form-group">
+                        <label for="comment" class="form-label">Comentarios</label>
+                        <textarea class="form-control contact" id="comment" name="comment" maxlength="400"></textarea>
+                    </div>
+                    <div class="form-button">
+                        <button type="submit" class="">Enviar comentarios</button>
+                    </div>
+                </form>
+            </section>
+        </div>
     </main>
 
     <footer class="footer">

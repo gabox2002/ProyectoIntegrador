@@ -23,17 +23,22 @@
 }
 
 .main-container {
-    background-color: hsl(207deg, 100%, 98%);
-    width: 375px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    
     font-family: "kalam", sans-serif;
     margin: auto;
     position: relative;
     @media (min-width: 1115px) {
+        
         width: 100%;
         min-height: 900px;
     }
 }
 .content {
+    max-width: 375px;
     @media (min-width: 1115px) {
         display: flex;
         flex-direction: row;

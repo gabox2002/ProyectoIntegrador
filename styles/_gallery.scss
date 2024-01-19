@@ -2,31 +2,37 @@
 @use "mixins";
 
 .gallery {
-    background-color: hsl(207deg, 100%, 98%);
+    background-color: white;
+    width: 320px;
 
     &__image-container {
         background-color: hsl(0, 0%, 100%);
         height: 300px;
-        width: 100%;
+        width: 320px;
+        
         background-image: url("../assets/images/image-product-1.jpg");
         background-position-x: center;
         background-size: contain;
         background-repeat: no-repeat;
+        position: relative;
         @media (min-width: 1115px) {
+            width: 446px;
             border: none;
             box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.6);
         }
     }
+   
     &__previus {
         @include mixins.image-btn(120px, 15px, false);
     }
     &__next {
-        @include mixins.image-btn(120px, 320px, false);
+        @include mixins.image-btn(120px, 270px, false);
     }
     &__thumbnails {
         display: none;
         @media (min-width: 1115px) {
             display: flex;
+            gap: 10px;
             justify-content: space-between;
         }
     }
@@ -46,6 +52,9 @@
     }
     @media (min-width: 1115px) {
         width: 446px;
+        padding-top: 120px;
+        background-color: hsl(207deg, 100%, 98%);
+
         &__image-container {
             background-position-y: 0;
             border-radius: 16px;

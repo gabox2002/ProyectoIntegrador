@@ -101,83 +101,81 @@
         </nav>
     </div>
     <!-- Fin del modal de inicio de sesión y registro -->
-    <main class="main-container form-container">
-        <h2 class="title-context">Dar de alta a un producto</h2>
-        <section class="content content-form">
-            <div class="container">
-                <div>
-                    <form class="formpages" id="uploadForm" onsubmit="onSubmitProduct(event)">
-                        <!-- Primera Columna -->
-                        <div class="column">
-                            <div class="column__form-group">
-                                <label for="name" class="form-label label-required">Nombre</label>
-                                <input type="text" class="form-control" id="name" name="name" required >
-                                <p id="nameError" class="input-msg-error"></p>
-                            </div>
-                            <div class="column__form-group">
-                                <label for="price" class="form-label label-required">Precio</label>
-                                <input type="number" class="form-control" id="price" name="price" required >
-                                <p id="priceError" class="input-msg-error"></p>
-                            </div>
-                            <div class="column__form-group">
-                                <label for="stock" class="form-label label-required">Stock</label>
-                                <input type="number" class="form-control" id="stock" name="stock" required min="0" >
-                                <p id="stockError" class="input-msg-error"></p>
-                            </div>
-                            <div class="column__form-group">
-                                <label for="brand" class="form-label">Marca</label>
-                                <input type="text" class="form-control" id="brand" name="brand" maxlength="20" >
-                                <p id="brandError" class="input-msg-error"></p>
-                            </div>
-                            <div class="column__form-group">
-                                <label for="category" class="form-label label-required">Categoría</label>
-                                <input type="text" class="form-control" id="category" name="category" required >
-                                <p id="categoryError" class="input-msg-error"></p>
-                            </div>
+    <main>
+        <h2 class="title-context form-title">Dar de alta a un producto</h2>
+        <div class="form-container">
+            <section class="content-form upload">
+                <form class="formpages-upload" id="uploadForm" onsubmit="onSubmitProduct(event)">
+                    <!-- Primera Columna -->
+                    <div class="column">
+                        <div class="column__form-group">
+                            <label for="name" class="form-label label-required">Nombre</label>
+                            <input type="text" class="form-control upload" id="name" name="name" required >
+                            <p id="nameError" class="input-msg-error"></p>
                         </div>
-                        <!-- Fin de la Primera Columna -->
-                        <!-- Segunda Columna -->
-                        <div class="column">
-                            <div class="column__form-group">
-                                <label for="shortDescription" class="form-label label-required">Descripción
-                                    corta</label>
-                                <input type="text" class="form-control" id="shortDescription" name="shortDescription"
-                                    required maxlength="120" >
-                                <p id="shortDescriptionError" class="input-msg-error"></p>
-                            </div>
-                            <div class="column__form-group">
-                                <label for="longDescription" class="form-label">Descripción larga</label>
-                                <textarea class="form-control" id="longDescription" name="longDescription"
-                                    minlength="60" maxlength="400"></textarea>
-                            </div>
-                            <div class="column__form-group checkbox-envio">
-                                <input type="checkbox" class="form-checkbox" id="freeDeliver" name="freeDeliver" >
-                                <label for="freeDeliver" class="">Envio sin cargo</label>
-                            </div>
-                            <div class="column__form-group">
-                                <label for="ageFrom" class="form-label">Edad desde</label>
-                                <input type="number" class="form-control" id="ageFrom" name="ageFrom" min="0" >
-                                <p id="ageFromError" class="input-msg-error"></p>
-                            </div>
-                            <div class="column__form-group">
-                                <label for="ageTo" class="form-label">Edad hasta</label>
-                                <input type="number" class="form-control" id="ageTo" name="ageTo" min="1" >
-                                <p id="ageToError" class="input-msg-error"></p>
-                            </div>
-                            <div class="column__form-group">
-                                <label for="photo" class="form-label label-required">Foto</label>
-                                <input type="file" class="form-control" id="photo" name="photo" required >
-                                <p id="photoError" class="input-msg-error"></p>
-                            </div>
+                        <div class="column__form-group">
+                            <label for="price" class="form-label label-required">Precio</label>
+                            <input type="number" class="form-control upload" id="price" name="price" required >
+                            <p id="priceError" class="input-msg-error"></p>
                         </div>
-                        <!-- Fin de la Segunda Columna -->
-                        <button type="submit" class="">
-                            Guardar producto
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </section>
+                        <div class="column__form-group">
+                            <label for="stock" class="form-label label-required">Stock</label>
+                            <input type="number" class="form-control upload" id="stock" name="stock" required min="0" >
+                            <p id="stockError" class="input-msg-error"></p>
+                        </div>
+                        <div class="column__form-group">
+                            <label for="brand" class="form-label">Marca</label>
+                            <input type="text" class="form-control upload" id="brand" name="brand" maxlength="20" >
+                            <p id="brandError" class="input-msg-error"></p>
+                        </div>
+                        <div class="column__form-group">
+                            <label for="category" class="form-label label-required">Categoría</label>
+                            <input type="text" class="form-control upload" id="category" name="category" required >
+                            <p id="categoryError" class="input-msg-error"></p>
+                        </div>
+                    </div>
+                    <!-- Fin de la Primera Columna -->
+                    <!-- Segunda Columna -->
+                    <div class="column">
+                        <div class="column__form-group">
+                            <label for="shortDescription" class="form-label label-required">Descripción
+                                corta</label>
+                            <input type="text" class="form-control upload" id="shortDescription" name="shortDescription"
+                                required maxlength="120" >
+                            <p id="shortDescriptionError" class="input-msg-error"></p>
+                        </div>
+                        <div class="column__form-group">
+                            <label for="longDescription" class="form-label">Descripción larga</label>
+                            <textarea class="form-control upload" id="longDescription" name="longDescription"
+                                minlength="60" maxlength="400"></textarea>
+                        </div>
+                        <div class="column__form-group checkbox-envio">
+                            <input type="checkbox" class="form-checkbox" id="freeDeliver" name="freeDeliver" >
+                            <label for="freeDeliver" class="">Envio sin cargo</label>
+                        </div>
+                        <div class="column__form-group">
+                            <label for="ageFrom" class="form-label">Edad desde</label>
+                            <input type="number" class="form-control upload" id="ageFrom" name="ageFrom" min="0" >
+                            <p id="ageFromError" class="input-msg-error"></p>
+                        </div>
+                        <div class="column__form-group">
+                            <label for="ageTo" class="form-label">Edad hasta</label>
+                            <input type="number" class="form-control upload" id="ageTo" name="ageTo" min="1" >
+                            <p id="ageToError" class="input-msg-error"></p>
+                        </div>
+                        <div class="column__form-group">
+                            <label for="photo" class="form-label label-required">Foto</label>
+                            <input type="file" class="form-control upload" id="photo" name="photo" required >
+                            <p id="photoError" class="input-msg-error"></p>
+                        </div>
+                    </div>
+                    <!-- Fin de la Segunda Columna -->
+                    <button type="submit" class="">
+                        Guardar producto
+                    </button>
+                </form>
+            </section>
+        </div>
     </main>
 
     <footer class="footer">

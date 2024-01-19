@@ -17,6 +17,9 @@
         font-family: "matura", sans-serif;
         font-weight: lighter;
     }
+    &__description--content{
+        padding: 0 20px;
+    }
 }
 
 .mission {
@@ -29,6 +32,9 @@
         font-family: "matura", sans-serif;
         font-weight: lighter;
     }
+    &__description--content{
+        padding: 0 20px;
+    }
 }
 
 .comunity {
@@ -39,6 +45,9 @@
     &__description--title {
         font-family: "matura", sans-serif;
         font-weight: lighter;
+    }
+    &__description--content{
+        padding: 0 20px;
     }
 }
 
